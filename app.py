@@ -3,7 +3,10 @@ import streamlit as st
 import os
 from langchain import HuggingFaceHub
 from langchain import PromptTemplate, LLMChain
-
+os.environ['LANGCHAIN_TRACING_V2']=true
+os.environ['LANGCHAIN_ENDPOINT']="https://api.smith.langchain.com"
+os.environ['LANGCHAIN_API_KEY']="ls__d676afea5dc04fa1837a8371e9a4d4de"
+os.environ['LANGCHAIN_PROJECT']="Python-code-generator"
 template = """generate synthetically correct python code for the given input question
 
 question: {input}
