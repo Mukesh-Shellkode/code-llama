@@ -1,5 +1,7 @@
 import streamlit as st
+from langsmith import Client
 
+client = Client()
 import os
 from langchain import HuggingFaceHub
 from langchain import PromptTemplate, LLMChain
